@@ -31,7 +31,7 @@ func ResetUser(input *User) {
 	input.name = ""
 	input.lastName = ""
 }
-func IsUser(input any) bool {
+func IsUser(input interface{}) bool {
 	if input == nil || reflect.TypeOf(input) != reflect.TypeOf(User{}) {
 		return false
 	}
