@@ -28,8 +28,8 @@ func NewUser() User {
 	return User{}
 }
 func ResetUser(input *User) {
-	input.name = ""
-	input.lastName = ""
+	input.SetFirstName("")
+	input.SetLastName("")
 }
 func IsUser(input interface{}) bool {
 	if input == nil || reflect.TypeOf(input) != reflect.TypeOf(User{}) {
@@ -37,6 +37,8 @@ func IsUser(input interface{}) bool {
 	}
 	return true
 }
-func ProcessUser(input UserInterface) string {
-	return input.FullName()
+func ProcessUser(u UserInterface) string {
+	u.SetLastName("Potter")
+	u.SetFirstName("Harry")
+	return u.FullName()
 }
