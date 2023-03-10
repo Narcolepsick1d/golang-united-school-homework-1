@@ -38,7 +38,5 @@ func IsUser(input interface{}) bool {
 	return true
 }
 func ProcessUser(u UserInterface) string {
-	u.SetLastName("Potter")
-	u.SetFirstName("Harry")
 	return u.FullName()
 }
