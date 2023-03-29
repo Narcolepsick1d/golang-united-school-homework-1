@@ -1,9 +1,5 @@
 package golang_united_school_homework_1
 
-import "fmt"
-	
-
-
 type User struct {
 	name     string
 	lastName string
@@ -21,7 +17,7 @@ func (u *User) SetLastName(lastName string) {
 	u.lastName = lastName
 }
 func (u *User) FullName() string {
-	return fmt.Sprintf("%s %s", u.lastName, u.name)
+	return u.lastName + " " + u.firstName
 }
 func NewUser() User {
 	return User{}
@@ -42,5 +38,8 @@ func IsUser(input interface{}) bool {
 	}
 }
 func ProcessUser(u UserInterface) string {
+	u.SetFirstName("John")
+	u.SetLastName("Doe")
+	
 	return u.FullName()
 }
