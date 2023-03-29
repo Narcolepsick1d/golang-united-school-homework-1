@@ -32,10 +32,15 @@ func ResetUser(input *User) {
 	input.SetLastName("")
 }
 func IsUser(input interface{}) bool {
-	if input == nil || reflect.TypeOf(input) != reflect.TypeOf(User{}) {
+	if input == nil  {
 		return false
 	}
-	return true
+	switch input.(type) {
+	case User:
+		return true
+	default:
+		return false
+	}
 }
 func ProcessUser(u UserInterface) string {
 	return u.FullName()
