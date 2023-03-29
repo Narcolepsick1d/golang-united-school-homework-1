@@ -17,7 +17,7 @@ func (u *User) SetLastName(lastName string) {
 	u.lastName = lastName
 }
 func (u *User) FullName() string {
-	return u.lastName + " " + u.firstName
+	return u.lastName + " " + u.name
 }
 func NewUser() User {
 	return User{}
