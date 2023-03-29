@@ -1,4 +1,4 @@
-package golang_united_school_homework_1
+package structs
 
 type User struct {
 	name     string
