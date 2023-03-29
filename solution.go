@@ -1,9 +1,8 @@
 package golang_united_school_homework_1
 
-import (
-	"fmt"
-	"reflect"
-)
+import "fmt"
+	
+
 
 type User struct {
 	name     string
